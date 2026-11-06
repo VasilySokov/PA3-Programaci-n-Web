@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Listar Usuarios</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+      crossorigin="anonymous"
+    />
+  </head>
+
+  <body>
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark">
+      <div class="container">
+        <a class="navbar-brand fw-bold" href="index.html">PA3</a>
+
+        <!-- Hidden Checkbox State -->
+        <input type="checkbox" id="nav-toggle" class="d-none" />
+
+        <!-- Toggler Button (Label tied to checkbox) -->
+        <label for="nav-toggle" class="navbar-toggler" role="button">
+          <span class="navbar-toggler-icon"></span>
+        </label>
+
+        <!-- Nav Links -->
+        <div class="collapse navbar-collapse" id="nav-menu">
+          <ul class="navbar-nav ms-auto mb-2 mb-md-0">
+            <li class="nav-item">
+              <a class="nav-link active" href="./index.html">Inicio</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./listarUsuarios.html"
+                >Listar Usuario</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./registrarUsuario.html"
+                >Registrar Usuarios</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./reporteUsuario.html">Reporte</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <div class="table-responsive-md mt-5 px-5">
+      <h1 class="text-center pb-5">Tabla de Usuarios</h1>
+      <div>
+        <input type="number" id="IdInput" value="" />
+        <button class="btn btn-primary" onclick="MostrarByID(this)">
+          Buscar
+        </button>
+      </div>
+      <br />
+      <table class="table table-dark" id="tablaDatos"></table>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+      crossorigin="anonymous"
+    ></script>
+    <script src="assets/scriptUsuario.js" defer></script>
+  </body>
+</html>
